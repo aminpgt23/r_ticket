@@ -1,0 +1,101 @@
+:root {
+    --brand: #0d6efd;
+    --bg: #f2f4f8;
+    --card: rgba(255,255,255,.95);
+    --radius: 18px;
+}
+
+/* BASE */
+body {
+    background: var(--bg);
+    font-size: 14px;
+}
+
+/* CARD */
+.card {
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+/* HEADER */
+.card-header {
+    background: transparent;
+    border-bottom: 1px solid #eee;
+    padding: 14px 18px;
+}
+
+/* BADGE iOS STYLE */
+.badge {
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+/* ACTION BUTTON */
+.btn-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+/* ===== MOBILE UI ===== */
+@media (max-width: 768px) {
+
+    .table-responsive {
+        display: none;
+    }
+
+    .user-card {
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 14px 16px;
+        margin-bottom: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    }
+
+    .user-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .user-name {
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .user-nip {
+        font-size: 12px;
+        color: #6b7280;
+    }
+
+    .user-meta {
+        margin-top: 8px;
+        font-size: 13px;
+        color: #374151;
+    }
+
+    .user-actions {
+        margin-top: 12px;
+        display: flex;
+        gap: 8px;
+    }
+
+    .btn-icon {
+        flex: 1;
+        border-radius: 14px;
+    }
+}
+
+/* ===== DESKTOP ===== */
+@media (min-width: 769px) {
+    .mobile-list {
+        display: none;
+    }
+}

@@ -1,0 +1,149 @@
+/* =========================
+   BASE
+========================= */
+body {
+    background: #f4f6f9;
+}
+
+/* =========================
+   MOBILE WAVE BACKGROUND
+========================= */
+@media (max-width:768px) {
+    body {
+        background: linear-gradient(180deg,#e8f0ff 0%,#f4f6f9 45%,#eef3ff 100%);
+        overflow-x: hidden;
+    }
+
+    .mobile-wave-top,
+    .mobile-wave-bottom {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+        background-size: cover;
+    }
+
+    .mobile-wave-top {
+        top: 0;
+        height: 130px;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%230d6efd' fill-opacity='0.15' d='M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,170.7C672,149,768,139,864,160C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,0Z'/%3E%3C/svg%3E");
+    }
+
+    .mobile-wave-bottom {
+        bottom: 0;
+        height: 150px;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%230d6efd' fill-opacity='0.12' d='M0,64L48,80C96,96,192,128,288,144C384,160,480,160,576,170.7C672,181,768,203,864,202.7C960,203,1056,181,1152,154.7C1248,128,1344,96,1392,80L1440,64L1440,320Z'/%3E%3C/svg%3E");
+    }
+}
+
+/* =========================
+   CARD
+========================= */
+.profile-card {
+    border-radius: 22px;
+    border: none;
+    box-shadow: 0 14px 34px rgba(0,0,0,.12);
+    overflow: hidden;
+}
+
+.profile-card .card-header {
+    /* background: linear-gradient(135deg,#0d6efd,#3b82f6); */
+    color: black;
+    padding: 14px 16px;
+}
+
+.profile-card .card-header h5 {
+    font-size: 15px;
+    margin: 0;
+}
+
+/* =========================
+   FORM
+========================= */
+.form-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6c757d;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.form-control {
+    border-radius: 14px;
+    font-size: 13px;
+    padding: 10px 12px;
+}
+
+.form-control:disabled {
+    background: #f1f3f7;
+}
+
+/* Section title */
+.section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 8px;
+}
+
+/* Divider */
+hr {
+    opacity: .15;
+}
+
+/* =========================
+   ALERT
+========================= */
+.alert {
+    font-size: 13px;
+    border-radius: 14px;
+}
+
+/* =========================
+   ACTION BAR
+========================= */
+.action-bar {
+    display: flex;
+    gap: 8px;
+}
+
+/* =========================
+   MOBILE MODE
+========================= */
+@media (max-width:768px) {
+
+    .container-fluid {
+        padding: 12px;
+    }
+
+    .profile-card {
+        margin-bottom: 100px;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    /* Sticky bottom actions */
+    .action-bar {
+        position: sticky;
+        bottom: 12px;
+        background: rgba(255,255,255,.94);
+        backdrop-filter: blur(10px);
+        padding: 10px;
+        border-radius: 18px;
+        box-shadow: 0 10px 24px rgba(0,0,0,.18);
+        z-index: 20;
+    }
+
+    .action-bar .btn {
+        flex: 1;
+        border-radius: 14px;
+        padding: 10px;
+    }
+
+    /* Icon only */
+    .action-bar span {
+        display: none;
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "RTicket",
+  "short_name": "RTicket",
+  "start_url": "https://amynt.my.id/r_ticket/",
+  "scope": "https://amynt.my.id/r_ticket/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#aecbf7ff",
+  "icons": [
+    {
+      "src": "https://amynt.my.id/r_ticket/icons/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },
+    {
+      "src": "https://amynt.my.id/r_ticket/icons/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    }
+  ]
+}

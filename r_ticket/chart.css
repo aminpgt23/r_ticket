@@ -1,0 +1,28 @@
+:root {
+    --bg: #f2f5f9;
+    --card: #fff;
+    --accent: #aecbf7ff;
+    --text-primary: #1c1c1e;
+    --text-muted: #8e8e93;
+    --radius: 16px;
+    --shadow: 0 8px 20px rgba(0,0,0,0.05);
+    --font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body { margin:0; font-family: var(--font); background-color: var(--bg); color: var(--text-primary); }
+.container-fluid { max-width: 1000px; margin:0 auto; padding:10px; }
+.card { background-color: var(--card); border-radius: var(--radius); padding:24px; margin-bottom:24px;  }
+.card h2 { margin-top:0; font-size:1.4rem; margin-bottom:16px; }
+canvas { width: 100% !important; max-height:400px; }
+
+.filter-bar { display:flex; gap:10px; margin-bottom:16px; flex-wrap:wrap; }
+.filter-bar input { padding:8px 12px; border-radius:var(--radius); border:1px solid #ccc; font-size:0.95rem; flex:1; min-width:120px; }
+
+.summary-cards { display:flex; flex-wrap:wrap; gap:16px; }
+.summary-card { background-color: var(--card); border-radius: var(--radius); padding:16px; flex:1 1 220px; box-shadow: var(--shadow); display:flex; justify-content:space-between; align-items:center; }
+.summary-card-left { display:flex; flex-direction:column; }
+.summary-card h3 { margin-top:0; font-size:1.1rem; margin-bottom:8px; }
+.summary-card p { margin:4px 0; font-size:0.9rem; color:var(--text-muted); }
+.summary-card-right { display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
+.badge { background-color: var(--accent); color:#fff; padding:4px 8px; border-radius:12px; font-size:0.75rem; font-weight:600; min-width:50px; text-align:center; }
+
+@media(max-width:768px){ .filter-bar { flex-direction:row; } }

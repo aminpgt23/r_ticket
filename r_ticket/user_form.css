@@ -1,0 +1,94 @@
+:root {
+    --brand: #0d6efd;
+    --bg: #f2f4f8;
+    --card: rgba(255,255,255,.96);
+    --radius: 22px;
+}
+
+/* BASE */
+body {
+    background: var(--bg);
+    font-size: 14px;
+}
+
+/* CARD */
+.form-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 32px rgba(0,0,0,.1);
+    border: none;
+}
+
+/* HEADER */
+.form-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+}
+.form-header h5 {
+    font-weight: 700;
+    margin: 0;
+}
+
+/* LABEL */
+.form-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6b7280;
+}
+
+/* INPUT */
+.form-control,
+.form-select {
+    border-radius: 14px;
+    padding: 12px 14px;
+    font-size: 14px;
+}
+
+/* PASSWORD */
+.password-wrap {
+    position: relative;
+}
+.password-wrap input {
+    padding-right: 42px;
+}
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #6b7280;
+}
+.toggle-password:hover {
+    color: var(--brand);
+}
+
+/* SWITCH */
+.form-check-input {
+    width: 42px;
+    height: 22px;
+}
+.form-check-input:checked {
+    background-color: var(--brand);
+    border-color: var(--brand);
+}
+
+/* BUTTON */
+.btn-main {
+    border-radius: 16px;
+    padding: 12px 18px;
+    font-weight: 600;
+}
+.btn-light {
+    border-radius: 16px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 14px;
+    }
+}

@@ -1,0 +1,169 @@
+/* ======================================================
+   iOS & ANDROID SMOOTH RESPONSIVE LAYER
+   SAFE OVERRIDE – TIDAK MERUSAK CSS LAMA
+====================================================== */
+
+/* -------------------------
+   GLOBAL MOBILE IMPROVEMENT
+-------------------------- */
+html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    touch-action: manipulation;
+}
+
+/* -------------------------
+   FONT & TAP SMOOTH
+-------------------------- */
+button,
+a,
+select,
+input {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* -------------------------
+   BACKDROP FIX (iOS)
+-------------------------- */
+.stat-modern,
+.filter-card {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px); /* 🔑 iOS FIX */
+}
+
+/* -------------------------
+   FILTER HORIZONTAL SCROLL (iOS)
+-------------------------- */
+@media (max-width: 768px) {
+    .filter-inline {
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+
+    .filter-inline > * {
+        scroll-snap-align: start;
+    }
+}
+
+/* -------------------------
+   DATE INPUT FIX (iOS SAFARI)
+-------------------------- */
+input[type="date"],
+input[type="datetime-local"] {
+    appearance: none;
+    -webkit-appearance: none;
+    min-height: 36px;
+}
+
+/* -------------------------
+   TABLE STICKY HEADER FIX (iOS)
+-------------------------- */
+.table-container {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background: #ffffff;
+}
+
+/* -------------------------
+   MOBILE CARD ANIMATION
+-------------------------- */
+.mobile-card {
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.mobile-card:active {
+    transform: scale(0.98);
+}
+
+/* -------------------------
+   BUTTON MODERN FEEL
+-------------------------- */
+.btn {
+    transition: background-color .15s ease,
+                transform .1s ease,
+                box-shadow .1s ease;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* -------------------------
+   MODAL iOS SAFE AREA
+-------------------------- */
+.modal-dialog {
+    margin-bottom: env(safe-area-inset-bottom);
+    margin-top: env(safe-area-inset-top);
+}
+
+/* -------------------------
+   MODAL SCROLL FIX (iOS)
+-------------------------- */
+.modal-body {
+    max-height: 65vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* -------------------------
+   SAFE AREA BOTTOM (iPhone)
+-------------------------- */
+@supports (padding: env(safe-area-inset-bottom)) {
+    .mobile-cards {
+        padding-bottom: calc(80px + env(safe-area-inset-bottom));
+    }
+}
+
+/* -------------------------
+   WAVE BACKGROUND FIX
+-------------------------- */
+.mobile-wave-top,
+.mobile-wave-bottom {
+    pointer-events: none;
+}
+
+/* -------------------------
+   BETTER MOBILE TYPOGRAPHY
+-------------------------- */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .stat-label {
+        font-size: 12px;
+    }
+
+    .stat-value {
+        font-size: 22px;
+    }
+}
+
+/* -------------------------
+   SMOOTH SCROLL CARD LIST
+-------------------------- */
+.mobile-cards {
+    scroll-behavior: smooth;
+}
+
+/* -------------------------
+   PERFORMANCE OPTIMIZATION
+-------------------------- */
+.stat-modern,
+.mobile-card,
+.filter-card {
+    will-change: transform;
+}
